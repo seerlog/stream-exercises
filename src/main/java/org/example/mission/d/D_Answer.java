@@ -43,6 +43,7 @@ public class D_Answer {
     public void getTradersInSeoul() {
         transactions.stream()
                 .map(Transaction::getTrader)
+                .distinct()
                 .filter(trader -> trader.getCity().equals("Seoul"))
                 .sorted(Comparator.comparing(Trader::getName))
                 .forEach(System.out::println);
