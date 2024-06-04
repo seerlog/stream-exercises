@@ -37,7 +37,7 @@ public class A_Answer {
     // 2. 각 취미를 선호하는 정씨 성을 갖는 인원이 몇 명인지 계산하여라.
     public void howManyPeopleHaveTheSurnameJungWhoPreferEachHobby() {
         users.stream()
-                .filter(user -> user.getName().contains("정"))
+                .filter(user -> user.getName().startsWith("정"))
                 .flatMap(user -> user.getHobbies().stream())
                 .collect(Collectors.groupingBy(hobby -> hobby, Collectors.counting()))
                 .forEach((hobby, count) -> System.out.println(hobby + " : " + count));
