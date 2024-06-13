@@ -8,6 +8,8 @@ import org.example.mission.d.D_Answer;
 import org.example.mission.e.E_Answer;
 import org.example.mission.f.F_Answer;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         A_Answer a_answer = new A_Answer();
